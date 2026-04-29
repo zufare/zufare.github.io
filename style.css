@@ -1,6 +1,5 @@
 /* Background utama */
 body {
-    body {
     margin: 0;
     font-family: Arial, sans-serif;
     background-image: url('laut.jpg');
@@ -8,6 +7,7 @@ body {
     background-repeat: no-repeat;
     background-position: center;
 }
+
 /* Container tengah */
 .container {
     text-align: center;
@@ -32,7 +32,7 @@ body {
     text-align: left;
 }
 
-/* Label (Nama, NPM, dll) */
+/* Label */
 .label {
     font-weight: bold;
     color: #333;
@@ -44,7 +44,7 @@ body {
     font-size: 16px;
 }
 
-/* Efek hover */
+/* Hover */
 .card:hover {
     transform: scale(1.05);
     transition: 0.3s;
