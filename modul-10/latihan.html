@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Latihan 2 - Kalkulator</title>
+
+    <style>
+        body{
+            font-family: Arial, sans-serif;
+            text-align:center;
+            margin-top:100px;
+        }
+
+        input{
+            padding:8px;
+            width:100px;
+        }
+
+        button{
+            padding:8px 15px;
+        }
+
+        #hasil{
+            margin-top:15px;
+            font-weight:bold;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Kalkulator Penjumlahan</h2>
+
+    <input type="number" id="angka1" placeholder="Angka 1">
+
+    +
+
+    <input type="number" id="angka2" placeholder="Angka 2">
+
+    <button onclick="hitungPenjumlahan()">Hitung</button>
+
+    <div id="hasil">Hasil: -</div>
+
+    <script>
+        function hitungPenjumlahan(){
+
+            const angka1 =
+            parseFloat(document.getElementById("angka1").value);
+
+            const angka2 =
+            parseFloat(document.getElementById("angka2").value);
+
+            const hasil =
+            document.getElementById("hasil");
+
+            if(isNaN(angka1) || isNaN(angka2)){
+                hasil.innerHTML =
+                "Error: Masukkan angka terlebih dahulu!";
+            }else{
+                hasil.innerHTML =
+                "Hasil: " + (angka1 + angka2);
+            }
+        }
+    </script>
+
+</body>
+</html>

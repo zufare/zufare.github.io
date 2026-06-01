@@ -1,18 +1,3 @@
-# Tugas Modul Praktikum 10 – Dark/Light Mode Switcher
-
-Berdasarkan tugas pada Modul Praktikum 10, diminta membuat halaman web interaktif bernama `tugas_mandiri.html` yang memiliki fitur:
-
-* Tombol Dark/Light Mode
-* Mengubah background dan warna teks
-* Menggunakan DOM dan logika `if-else`
-
-Berikut coding lengkap yang bisa langsung dipakai.
-
----
-
-## File: tugas_mandiri.html
-
-```html
 <!DOCTYPE html>
 <html lang="id">
 <head>
@@ -21,7 +6,6 @@ Berikut coding lengkap yang bisa langsung dipakai.
     <title>Tugas Mandiri Modul 10</title>
 
     <style>
-        /* Style default halaman */
         body {
             font-family: Arial, sans-serif;
             background-color: white;
@@ -31,13 +15,11 @@ Berikut coding lengkap yang bisa langsung dipakai.
             transition: 0.4s;
         }
 
-        /* Style saat dark mode aktif */
         .dark-mode {
             background-color: #121212;
             color: white;
         }
 
-        /* Style tombol */
         button {
             padding: 12px 25px;
             font-size: 16px;
@@ -58,32 +40,27 @@ Berikut coding lengkap yang bisa langsung dipakai.
     <h1>Dark & Light Mode</h1>
     <p>Klik tombol di bawah untuk mengganti tema halaman.</p>
 
-    <!-- Tombol untuk mengganti mode -->
     <button id="toggleBtn">Aktifkan Dark Mode</button>
 
     <script>
 
-        // Mengambil elemen tombol berdasarkan ID
+        // Mengambil tombol
         const tombol = document.getElementById("toggleBtn");
 
-        // Event ketika tombol diklik
+        // Saat tombol diklik
         tombol.addEventListener("click", function () {
 
-            // Mengecek apakah body memiliki class dark-mode
+            // Cek apakah dark mode aktif
             if (document.body.classList.contains("dark-mode")) {
 
-                // Jika dark mode aktif, hapus class dark-mode
+                // Kembali ke light mode
                 document.body.classList.remove("dark-mode");
-
-                // Mengubah teks tombol
                 tombol.textContent = "Aktifkan Dark Mode";
 
             } else {
 
-                // Jika belum dark mode, tambahkan class dark-mode
+                // Aktifkan dark mode
                 document.body.classList.add("dark-mode");
-
-                // Mengubah teks tombol
                 tombol.textContent = "Aktifkan Light Mode";
             }
         });
@@ -92,74 +69,3 @@ Berikut coding lengkap yang bisa langsung dipakai.
 
 </body>
 </html>
-```
-
----
-
-# Penjelasan Singkat
-
-## 1. HTML
-
-Digunakan untuk membuat:
-
-* Judul halaman
-* Paragraf
-* Tombol Dark/Light Mode
-
-## 2. CSS
-
-Digunakan untuk:
-
-* Mengatur warna background
-* Mengatur warna teks
-* Membuat tampilan tombol lebih menarik
-* Membuat efek transisi
-
-## 3. JavaScript
-
-Digunakan untuk:
-
-* Mengambil elemen tombol dengan DOM
-* Mendeteksi klik tombol menggunakan `addEventListener`
-* Menggunakan `if-else` untuk mengecek mode saat ini
-* Menambah atau menghapus class `dark-mode`
-
----
-
-# Cara Menjalankan
-
-1. Buka Visual Studio Code
-2. Buat file baru bernama:
-
-```text
-tugas_mandiri.html
-```
-
-3. Copy seluruh kode di atas
-4. Save file
-5. Jalankan menggunakan:
-
-```text
-CTRL + F5
-```
-
-atau klik kanan → Open with Live Server.
-
----
-
-# Pembahasan Singkat untuk Laporan
-
-Program ini dibuat menggunakan HTML, CSS, dan JavaScript.
-HTML digunakan untuk membuat struktur halaman dan tombol.
-CSS digunakan untuk mengatur tampilan halaman seperti warna background, warna teks, dan desain tombol.
-JavaScript digunakan untuk membuat fitur interaktif Dark Mode dan Light Mode.
-Saat tombol diklik, program akan mengecek apakah class `dark-mode` aktif atau tidak menggunakan `if-else`. Jika aktif maka mode kembali terang, jika tidak aktif maka halaman berubah menjadi gelap.
-
----
-
-Tugas ini sudah memenuhi kriteria:
-
-* Menggunakan DOM
-* Menggunakan logika if-else
-* Menggunakan JavaScript interaktif
-* Kode rapi dan memiliki komentar
